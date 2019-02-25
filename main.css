@@ -1,0 +1,52 @@
+html,
+body {
+  background: #140f0f;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+body {
+  transition: -webkit-filter 0.25s ease;
+  transition: filter 0.25s ease;
+  transition: filter 0.25s ease, -webkit-filter 0.25s ease;
+  background: center/auto 90% no-repeat url("/img/satsuki_gray.png");
+}
+body::before {
+  content: "";
+  background: inherit;
+  -webkit-filter: brightness(0);
+          filter: brightness(0);
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+div {
+  text-align: center;
+}
+div * {
+  color: #5d4646;
+}
+div h1 {
+  font-weight: 700;
+}
+div h1 span {
+  color: #c3156a;
+}
+div p {
+  font-weight: 600;
+}
